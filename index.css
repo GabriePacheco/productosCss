@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    min-height: 100%;
+    
+}
+
+.h100 {
+    height: 100%;
+  
+}
+
+.contenedor{
+    -webkit-box-reflect: below 1px;
+}
+.contenedor .cuadro {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    height: 50vh;
+    background: linear-gradient(
+        45deg, #D93231ff 25%,  #393939 25%,  #393939 50%, 
+        #D93231ff 50%, #D93231ff 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+    filter: grayscale(1);
+     animation: animationBg 0.5s linear infinite;
+     animation-play-state: paused;
+     transition: filter 0.8s;
+}
+
+.contenedor .cuadro:nth-child(2) {
+    background: linear-gradient(
+        135deg, #8DA857 25%,  #393939 25%,  #393939 50%, 
+        #8DA857 50%,#8DA857 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+}
+
+.contenedor .cuadro:nth-child(3) {
+    background: linear-gradient(
+        225deg, #F9B317 25%,  #393939 25%,  #393939 50%, 
+        #F9B317 50%,#F9B317 75%, #393939 75%,  #393939 100%
+     );
+     background-size: 40px 40px;
+}
+
+.contenedor .cuadro:hover {
+    animation-play-state: running;
+    filter: grayscale(0);
+}
+
+
+.contenedor .cuadro img
+{ 
+    position:absolute;
+    bottom: 0;
+    height:50vh;
+    bottom: 0;
+    transition: height 0.8s;
+
+        
+}
+
+.contenedor .cuadro:hover img
+{ 
+    height: 55vh;    
+}
+
+@keyframes animationBg {
+    
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 40px;
+    }
+}
